@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../resources/wave.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position-y: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    background-color: transparent;
+    display: flex;
+}
+
+header nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li{
+    list-style: none;
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li a{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 150%;
+    color: #0099ff;
+}
+
+header nav ul li a:hover{
+    animation: rotate 1s ease-in;
+    animation-direction: alternate;
+    transition: all 0.5s;
+
+}
+
+header .container{
+    width: 100%;
+    height: 85%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .container-title{
+    width: 33.33%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header .container .container-title h1{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 300%;
+}
+
+header .container .container-title h2{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+header .container .container-description{
+    width: 33.33%;
+    height: 70%;
+}
+
+header .container .container-description strong{
+    font-size: 200%;
+    text-align: center;
+    justify-content: center;
+
+}
+
+header .container .container-img{
+    width: 33.33%;
+    height: 90%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .container-img img{
+    width: 80%;
+    height: 50%;
+}
+
+header .container .animation{
+    position: relative;
+    top: -25%;
+    left: -95%;
+    width: 5%;
+    height: 40%;
+    background-color: #0099ff;
+    animation: translate 8s infinite;
+    border-radius: 10rem;
+}
+
+article{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+footer{
+    width: 100%;
+    height: 40vh;
+    background-color: darkblue;
+}
+
+/* .container{
+    width: 20%;
+    height: 20%;
+    background: linear-gradient(red, blue);
+    animation: rotate 1s infinite;
+    animation-direction: alternate;
+} */
+
+@keyframes rotate {
+    0%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes translate {
+    0%{
+        transform: translateX(60vw);
+    }
+
+    25%{
+        opacity: .7;
+    }
+
+    50%{
+        background-color: white;
+    }
+
+    100%{
+        transform: translateX(-60vw);
+    }
+}
